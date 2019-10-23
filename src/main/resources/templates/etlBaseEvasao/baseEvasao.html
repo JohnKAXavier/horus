@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html layout:decorate="~{layout}">
+<head>
+<meta charset="UTF-8">
+</head>
+
+<section class="layout-content" layout:fragment="corpo">
+
+	<h1>Spring Boot file upload example</h1>
+
+	<form method="POST" action="/etlBase/upload" enctype="multipart/form-data">
+	    <input type="file" name="arquivo" /><br/><br/>
+	    <input type="submit" value="Submit" />
+	</form>
+
+</section>
+
+
+
+</html>

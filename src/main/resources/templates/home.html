@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html layout:decorate="~{layout}">
+
+<head>
+<meta charset="UTF-8" />
+<script type="text/javascript"
+	src="https://www.gstatic.com/charts/loader.js"></script>
+
+
+<script type="text/javascript">
+	google.charts.load("current", {
+		packages : [ "corechart" ]
+	});
+	google.charts.setOnLoadCallback(drawChart);
+
+	function drawChart() {
+		var data = google.visualization.arrayToDataTable([
+				[ 'Task', 'Hours per Day' ], [ 'Work', 11 ], [ 'Eat', 2 ],
+				[ 'Commute', 2 ], [ 'Watch TV', 2 ], [ 'Sleep', 7 ] ]);
+
+		var options = {
+			title : 'My Daily Activities',
+			pieHole : 0.4,
+		};
+
+		var chart = new google.visualization.PieChart(document
+				.getElementById('donutchart'));
+		chart.draw(data, options);
+	}
+</script>
+
+
+<script type="text/javascript"
+	src="https://www.gstatic.com/charts/loader.js"></script>
+<script type="text/javascript">
+	google.charts.load('current', {
+		'packages' : [ 'corechart' ]
+	});
+	google.charts.setOnLoadCallback(drawChart);
+
+	function drawChart() {
+		var data = google.visualization.arrayToDataTable([
+				[ 'Year', 'Sales', 'Expenses' ], [ '2013', 1000, 400 ],
+				[ '2014', 1170, 460 ], [ '2015', 660, 1120 ],
+				[ '2016', 1030, 540 ] ]);
+
+		var options = {
+			title : 'Company Performance',
+			hAxis : {
+				title : 'Year',
+				titleTextStyle : {
+					color : '#333'
+				}
+			},
+			vAxis : {
+				minValue : 0
+			}
+		};
+
+		var chart = new google.visualization.AreaChart(document
+				.getElementById('chart_div'));
+		chart.draw(data, options);
+	}
+</script>
+
+
+</head>
+<body>
+
+	
+		<section class="layout-content" layout:fragment="corpo">
+		
+		<h4 class="text-center mt-3" > Bem vinda, Suzana<p>
+Esta é a situação atual de risco de evasão dos Alunos da Unisuam</h4>
+		
+		<div class="form-row col-md mt-5 justify-content-center align-items-center">
+		
+		<div class="form-group col-md-3 ">
+      <label for="inputState">Unidade</label>
+      <select id="inputState" class="form-control">
+        <option selected>Unidade</option>
+        <option>...</option>
+      </select>
+    </div>
+    
+    <div class="form-group col-md-2">
+      <label for="inputState">Modalidade</label>
+      <select id="inputState" class="form-control">
+        <option selected>Modalidade</option>
+        <option>...</option>
+      </select>
+    </div>
+    
+    <div class="form-group col-md-2">
+      <label for="inputState">Curso</label>
+      <select id="inputState" class="form-control">
+        <option selected>Curso</option>
+        <option>...</option>
+      </select>
+    </div>
+		
+		 <div class="form-group col-md-2">
+      <label for="inputState">Turno</label>
+      <select id="inputState" class="form-control">
+        <option selected>Turno</option>
+        <option>...</option>
+      </select>
+    </div>
+    
+    	 <div class="form-group col-md-2">
+      <label for="inputState">Disciplina</label>
+      <select id="inputState" class="form-control">
+        <option selected>Disciplina</option>
+        <option>...</option>
+      </select>
+    </div>
+    
+    </div>
+    
+		
+			<div class="container mt-3">
+  			<div class="row">
+			<div class="graph col-sm">
+
+				<svg class="graph_media" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 266.4 266.4">
+                    <g>
+                      <path class="st0"
+						d="M130.5,32.2V0c-53.3,1.1-99,33.5-119.3,79.6l30,11.8C56.7,57.3,90.7,33.3,130.5,32.2z" />
+                      <path class="st2"
+						d="M133.2,0c-0.9,0-1.8,0-2.7,0v32.2c0.9,0,1.8,0,2.7,0c55.8,0,101,45.2,101,101s-45.2,101-101,101
+                        s-101-45.2-101-101c0-14.9,3.2-29,9-41.7l-30-11.8C4,96,0,114.1,0,133.2c0,73.6,59.6,133.2,133.2,133.2s133.2-59.6,133.2-133.2
+                        S206.7,0,133.2,0z" />
+                    </g>
+                    <strong>Scores entre 100 - 66</strong>
+                  </svg>
+			</div>
+
+			<div class="graph col-sm" >
+
+				<svg class="graph_media" version="1.1"	xmlns="http://www.w3.org/2000/svg" viewBox="0 0 266.4 266.4">
+                    <g>
+                      <path class="st0" 
+						d="M130.5,32.2V0c-53.3,1.1-99,33.5-119.3,79.6l30,11.8C56.7,57.3,90.7,33.3,130.5,32.2z" />
+                      <path class="st3"
+						d="M133.2,0c-0.9,0-1.8,0-2.7,0v32.2c0.9,0,1.8,0,2.7,0c55.8,0,101,45.2,101,101s-45.2,101-101,101
+                        s-101-45.2-101-101c0-14.9,3.2-29,9-41.7l-30-11.8C4,96,0,114.1,0,133.2c0,73.6,59.6,133.2,133.2,133.2s133.2-59.6,133.2-133.2
+                        S206.7,0,133.2,0z" />
+                    </g>
+                    <strong id=dados> Scores entre 65 - 34   </strong>
+                  </svg>
+                  
+             </div>
+                  
+				<div class="graph col-sm" >
+
+					<svg class="graph_media" version="1.1"
+						xmlns="http://www.w3.org/2000/svg" viewBox="0 0 266.4 266.4">
+                    <g>
+                      <path class="st0"
+							d="M130.5,32.2V0c-53.3,1.1-99,33.5-119.3,79.6l30,11.8C56.7,57.3,90.7,33.3,130.5,32.2z" />
+                      <path class="st1"
+							d="M133.2,0c-0.9,0-1.8,0-2.7,0v32.2c0.9,0,1.8,0,2.7,0c55.8,0,101,45.2,101,101s-45.2,101-101,101
+                        s-101-45.2-101-101c0-14.9,3.2-29,9-41.7l-30-11.8C4,96,0,114.1,0,133.2c0,73.6,59.6,133.2,133.2,133.2s133.2-59.6,133.2-133.2
+                        S206.7,0,133.2,0z" />
+                    </g>
+                    <strong>Scores entre 35 - 0</<strong>
+                  </svg>
+				</div>
+				</div>
+				
+				<div class="col text-center mt-3">
+      <a class="btn btn-primary" href="/turmas">Ver Turmas</a>
+    </div>
+				</div>
+			
+			<!-- <div class="container">
+				<div class="row">
+					<div class="col">
+						<div class="collapse" id="collapseNome"></div>
+					</div>
+				</div>
+
+				<div class="table-responsive">
+					<table class="table table-striped table-hover table-sm">
+						<thead>
+							<tr>
+								<th>#</th>
+								<th>Nome</th>
+								<th>Unidade</th>
+								<th>Curso</th>
+								<th>Turno</th>
+
+							</tr>
+						</thead>
+						<tbody>
+							<tr th:each="c : ${aluno}">
+								<td th:text="${c.id}"></td>
+								<td th:text="${c.nome}"></td>
+								<td th:text="${c.endereco}"></td>
+
+
+
+							</tr>
+							{cliente_id}
+						</tbody>
+					</table>
+				</div>
+
+
+			</div> -->
+
+		<!-- 	<div class="row justify-content-md-center ">
+				<div id="donutchart" style="width: 530px; height: 450px;"></div>
+				<div id="chart_div" style="width: 530px; height: 450px;"></div>
+			</div> -->
+			
+		</section>		
+
+	
+
+
+</body>
+</html>

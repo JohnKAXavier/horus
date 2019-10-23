@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html layout:decorate="~{layout}">
+
+<head>
+
+ <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Período', 'Total'],
+          ['Março',  10 ],
+          ['Abril',  15 ],
+          ['Maio',  6 ],
+          ['Junho',  10 ]
+        ]);
+
+        var options = {
+          title: 'Numero de Faltas',
+          hAxis: {title: 'Meses',  titleTextStyle: {color: '#333'}},
+          vAxis: {minValue: 0}
+        };
+
+        var chart = new google.visualization.AreaChart(document.getElementById('chart_div'));
+        chart.draw(data, options);
+      }
+    </script>
+    
+      <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Período', 'Total'],
+          ['Março',  10 ],
+          ['Abril',  15 ],
+          ['Maio',  6 ],
+          ['Junho',  10 ]
+        ]);
+
+        var options = {
+          title: 'Notas do período',
+          hAxis: {title: 'Meses',  titleTextStyle: {color: '#333'}},
+          vAxis: {minValue: 0}
+        };
+
+        var chart = new google.visualization.AreaChart(document.getElementById('chart_div2'));
+        chart.draw(data, options);
+      }
+    </script>
+    
+      <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Período', 'Total'],
+          ['Março',  10 ],
+          ['Abril',  4 ],
+          ['Maio',  6 ],
+          ['Junho',  3 ]
+        ]);
+
+        var options = {
+          title: 'Número de Acesso',
+          hAxis: {title: 'Meses',  titleTextStyle: {color: '#333'}},
+          vAxis: {minValue: 0}
+        };
+
+        var chart = new google.visualization.AreaChart(document.getElementById('chart_div3'));
+        chart.draw(data, options);
+      }
+    </script>
+<meta charset="UTF-8" />
+
+<section class="layout-content" layout:fragment="corpo">
+
+
+<div class="card-group justify-content-center align-items-center mb-5" >
+
+	<div class="card bg-light mt-5 mr-3"	style="max-width: 18rem;">
+		<div class="card-header"><a class="text-dark" href="/situaçãoDoAluno">Bianca Pereira</a></div>
+		<div class="card-body">
+			<h5 class="card-title">Manhã</h5>
+			<p class="card-text">2019.1.5678</p>
+			<p class="card-text">Admnistração</p>
+		</div>
+	</div>
+	
+	
+	    <div id="chart_div" style="width: 100%; height: 500px;"></div>
+	    <div id="chart_div2" style="width: 100%; height: 500px;"></div>
+	    <div id="chart_div3" style="width: 100%; height: 500px;"></div>
+	
+	</div>
+
+</section>
+</head>
+</html>
